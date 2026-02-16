@@ -1,0 +1,19 @@
+{
+    "name": "Python pyuvm & Jupyter",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "mshr-h.verilog-hdl-support" 
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {}
+    },
+    "postCreateCommand": "pip install jupyter pyuvm cocotb && sudo apt-get update && sudo apt-get install -y iverilog",
+    "remoteUser": "vscode"
+}
